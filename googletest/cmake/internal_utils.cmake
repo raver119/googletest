@@ -39,7 +39,7 @@ macro(fix_default_compiler_settings_)
         # on CRT DLLs being available. CMake always defaults to using shared
         # CRT libraries, so we override that default here.
         string(REPLACE "/MD" "-MT" ${flag_var} "${${flag_var}}")
-        message("FLAG: ${flag_var})
+        message("FLAG: ${flag_var}")
       endif()
 
       # We prefer more strict warning checking for building Google Test.
